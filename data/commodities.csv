@@ -1,0 +1,16 @@
+id,name,category,moisture_pct,fat_pct,ph,respiration_rate,ideal_temp_c,ideal_humidity_pct,typical_shelf_life_days,recommended_gas_ratio_o2,recommended_gas_ratio_co2,recommended_gas_ratio_n2,sensitivity_notes
+1,Tomato,Fruits,94.0,0.2,4.3,High,10.0,85.0,10,3.0,5.0,92.0,Chilling sensitive below 7°C; moderate ethylene producer; prone to mould in condensation
+2,Fresh Leafy Greens (Spinach),Vegetables,92.0,0.4,6.2,Very High,4.0,95.0,5,3.0,8.0,89.0,Rapid moisture loss; very high respiration; requires micro-perforations to prevent anaerobic spoilage
+3,Biscuits & Cookies,Bakery,3.0,18.0,6.5,None,22.0,50.0,180,0.0,0.0,100.0,Extremely sensitive to moisture uptake (loss of crispness) and fat oxidation (rancidity)
+4,Potato Chips / Crisps,Snacks,1.5,32.0,6.0,None,20.0,45.0,150,0.0,0.0,100.0,High fat content requires excellent oxygen and light barrier; nitrogen flushing standard
+5,Apple (Fresh Cut Slices),Fruits,86.0,0.2,3.8,Medium,2.0,90.0,12,2.0,6.0,92.0,Prone to enzymatic browning; needs controlled O2 and acidic preservation
+6,Fresh Chicken Breast,Meat,74.0,2.5,5.8,None,2.0,85.0,6,70.0,30.0,0.0,High moisture and protein; requires high-barrier MAP or vacuum skin packaging to prevent bacterial growth
+7,Artisan Sliced Bread,Bakery,38.0,3.5,5.4,None,20.0,65.0,7,0.0,30.0,70.0,Starch retrogradation (staling) and mould growth; needs balanced barrier and antimould atmosphere
+8,Strawberries,Fruits,91.0,0.3,3.5,High,1.0,90.0,7,3.0,10.0,87.0,High mould risk (Botrytis cinerea); benefits from high CO2 (10-15%) and breathable film
+9,Whole Milk Powder,Dairy,3.5,26.0,6.6,None,20.0,50.0,365,0.0,0.0,100.0,Highly sensitive to photo-oxidation, oxygen rancidity, and moisture caking; needs foil/metallized laminate
+10,Fresh Mushroom (Button),Vegetables,92.5,0.3,6.5,Very High,2.0,92.0,6,3.0,10.0,87.0,Very high respiration rate; open cap discolouration; high OTR required to avoid anaerobic odour
+11,Roasted Coffee Beans,Snacks,2.0,15.0,5.0,None,20.0,50.0,365,0.0,0.0,100.0,Degassing of CO2 after roasting; extreme light and moisture sensitivity; requires one-way degassing valve
+12,Fish Fillet (Salmon),Meat,68.0,12.0,6.2,None,0.0,90.0,5,0.0,50.0,50.0,High polyunsaturated fatty acids prone to rapid oxidation; strict cold chain and MAP required
+13,Basmati Rice,Grains,12.0,0.8,6.5,Low,22.0,60.0,730,0.0,0.0,100.0,Requires insect barrier, moderate moisture barrier, good puncture resistance
+14,Table Grapes,Fruits,81.0,0.2,3.6,Low,0.0,90.0,21,5.0,0.0,95.0,Sensitive to sulphur dioxide generators; needs puncture resistance and condensation control
+15,Cheddar Cheese Block,Dairy,37.0,33.0,5.2,None,4.0,80.0,90,0.0,30.0,70.0,Vacuum or MAP packed with low oxygen permeability to inhibit surface mould while allowing curing

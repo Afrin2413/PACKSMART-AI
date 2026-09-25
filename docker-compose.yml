@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: packsmart_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: packsmart_user
+      POSTGRES_PASSWORD: packsmart_password_2026
+      POSTGRES_DB: packsmart_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U packsmart_user -d packsmart_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: packsmart_backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://packsmart_user:packsmart_password_2026@db:5432/packsmart_db
+      SECRET_KEY: packsmart_super_secure_secret_key_2026
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: packsmart_frontend
+    restart: always
+    environment:
+      - VITE_API_URL=http://localhost:8000/api
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

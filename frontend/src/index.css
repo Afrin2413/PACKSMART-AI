@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #101512;
+    color: #F5F1E8;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Clean Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #101512;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #203128;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7FAF6A;
+  }
+}
+
+@layer components {
+  .lab-card {
+    background-color: #17221C;
+    border: 1px solid rgba(127, 175, 106, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+  }
+
+  .lab-card-hover {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .lab-card-hover:hover {
+    border-color: rgba(127, 175, 106, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.4);
+  }
+
+  .lab-input {
+    background-color: #101512;
+    border: 1px solid #2C4136;
+    color: #F5F1E8;
+    border-radius: 12px;
+    padding: 0.65rem 1rem;
+    outline: none;
+    transition: all 0.15s ease-in-out;
+  }
+  .lab-input:focus {
+    border-color: #7FAF6A;
+    box-shadow: 0 0 0 2px rgba(127, 175, 106, 0.2);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #7FAF6A 0%, #2E5B3D 100%);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0 20px rgba(127, 175, 106, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background-color: #203128;
+    color: #F5F1E8;
+    border: 1px solid rgba(127, 175, 106, 0.2);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .btn-secondary:hover {
+    background-color: #2C4136;
+    border-color: #7FAF6A;
+  }
+}
+
+/* Radar chart styling overrides */
+.recharts-polar-grid-angle line,
+.recharts-polar-grid-concentric circle,
+.recharts-polar-grid-concentric path {
+  stroke: #2C4136 !important;
+}
+
+.recharts-polar-angle-axis-text text,
+.recharts-polar-angle-axis text,
+.recharts-polar-angle-axis-tick text {
+  fill: #A8C66C !important;
+  font-size: 11px;
+}
